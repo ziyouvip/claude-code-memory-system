@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "claude-code-memory"
+version = "1.0.0"
+description = "Self-evolving memory system for Claude Code"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.8"
+authors = [
+    {name = "Your Name", email = "your@email.com"}
+]
+keywords = ["claude", "ai", "memory", "agent"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+dependencies = [
+    "qdrant-client>=1.10.0",
+    "sentence-transformers>=3.0.0",
+]
+
+[project.scripts]
+claude-memory-install = "claude_memory:install"
+claude-memory-analyze = "claude_memory:analyze"
+claude-memory-inject = "claude_memory:inject"
+
+[project.urls]
+Homepage = "https://github.com/ziyouvip/claude-code-memory-system"
+Repository = "https://github.com/ziyouvip/claude-code-memory-system"
+Issues = "https://github.com/ziyouvip/claude-code-memory-system/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]

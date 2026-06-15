@@ -44,22 +44,46 @@
 
 提炼完成的规则写入规则文件，下次会话启动时自动加载。使用向量检索实现语义召回。
 
-## 安装
+## 快速安装
 
-### 1. 克隆仓库
+### 方式一：一键安装脚本（推荐）
+
+**macOS / Linux:**
+```bash
+curl -fsSL https://raw.githubusercontent.com/yourname/claude-code-memory-system/main/install.sh | bash
+```
+
+**Windows (PowerShell):**
+```powershell
+irm https://raw.githubusercontent.com/yourname/claude-code-memory-system/main/install.ps1 | iex
+```
+
+### 方式二：pip 安装
 
 ```bash
-git clone https://github.com/yourusername/claude-code-memory-system.git
+pip install claude-code-memory
+claude-memory-install
+```
+
+### 方式三：手动安装
+
+<details>
+<summary>点击展开手动安装步骤</summary>
+
+#### 1. 克隆仓库
+
+```bash
+git clone https://github.com/ziyouvip/claude-code-memory-system.git
 cd claude-code-memory-system
 ```
 
-### 2. 安装依赖
+#### 2. 安装依赖
 
 ```bash
 pip install qdrant-client sentence-transformers
 ```
 
-### 3. 复制文件到 Claude Code 目录
+#### 3. 复制文件到 Claude Code 目录
 
 ```bash
 # 创建目录
@@ -73,7 +97,7 @@ cp hooks/observe.py ~/.claude/hooks/
 cp bin/*.py ~/.claude/bin/
 ```
 
-### 4. 配置 Hooks
+#### 4. 配置 Hooks
 
 编辑 `~/.claude/settings.json`，添加 hooks 配置：
 
@@ -113,6 +137,8 @@ cp bin/*.py ~/.claude/bin/
   }
 }
 ```
+
+</details>
 
 ## 目录结构
 

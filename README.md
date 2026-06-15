@@ -50,12 +50,12 @@
 
 **macOS / Linux:**
 ```bash
-curl -fsSL https://raw.githubusercontent.com/yourname/claude-code-memory-system/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/yourname/claude-code-memory-system/master/install.sh | bash
 ```
 
 **Windows (PowerShell):**
 ```powershell
-irm https://raw.githubusercontent.com/yourname/claude-code-memory-system/main/install.ps1 | iex
+irm https://raw.githubusercontent.com/yourname/claude-code-memory-system/master/install.ps1 | iex
 ```
 
 ### 方式二：pip 安装

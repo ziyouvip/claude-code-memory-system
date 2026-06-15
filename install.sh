@@ -1,6 +1,6 @@
 #!/bin/bash
 # Claude Code Memory System - 一键安装脚本
-# 用法: curl -fsSL https://raw.githubusercontent.com/ziyouvip/claude-code-memory-system/main/install.sh | bash
+# 用法: curl -fsSL https://raw.githubusercontent.com/ziyouvip/claude-code-memory-system/master/install.sh | bash
 
 set -e
 
@@ -39,11 +39,11 @@ mkdir -p "$CLAUDE_DIR/rules"
 
 echo -e "${YELLOW}Step 2/5${NC} Downloading scripts..."
 # 下载脚本
-curl -fsSL "$REPO_URL/raw/main/hooks/observe.py" -o "$CLAUDE_DIR/hooks/observe.py"
-curl -fsSL "$REPO_URL/raw/main/bin/auto-analyze-instincts.py" -o "$CLAUDE_DIR/bin/auto-analyze-instincts.py"
-curl -fsSL "$REPO_URL/raw/main/bin/auto-evolve.py" -o "$CLAUDE_DIR/bin/auto-evolve.py"
-curl -fsSL "$REPO_URL/raw/main/bin/inject_memory_context.py" -o "$CLAUDE_DIR/bin/inject_memory_context.py"
-curl -fsSL "$REPO_URL/raw/main/bin/observations_rotate.py" -o "$CLAUDE_DIR/bin/observations_rotate.py"
+curl -fsSL "$REPO_URL/raw/master/hooks/observe.py" -o "$CLAUDE_DIR/hooks/observe.py"
+curl -fsSL "$REPO_URL/raw/master/bin/auto-analyze-instincts.py" -o "$CLAUDE_DIR/bin/auto-analyze-instincts.py"
+curl -fsSL "$REPO_URL/raw/master/bin/auto-evolve.py" -o "$CLAUDE_DIR/bin/auto-evolve.py"
+curl -fsSL "$REPO_URL/raw/master/bin/inject_memory_context.py" -o "$CLAUDE_DIR/bin/inject_memory_context.py"
+curl -fsSL "$REPO_URL/raw/master/bin/observations_rotate.py" -o "$CLAUDE_DIR/bin/observations_rotate.py"
 
 echo -e "${YELLOW}Step 3/5${NC} Installing Python dependencies..."
 $PYTHON -m pip install -q qdrant-client sentence-transformers 2>/dev/null || {

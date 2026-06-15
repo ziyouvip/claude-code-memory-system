@@ -1,5 +1,5 @@
 # Claude Code Memory System - Windows 一键安装脚本
-# 用法: irm https://raw.githubusercontent.com/ziyouvip/claude-code-memory-system/main/install.ps1 | iex
+# 用法: irm https://raw.githubusercontent.com/ziyouvip/claude-code-memory-system/master/install.ps1 | iex
 
 $ErrorActionPreference = "Stop"
 

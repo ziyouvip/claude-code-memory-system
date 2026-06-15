@@ -44,18 +44,47 @@
 
 提炼完成的规则写入规则文件，下次会话启动时自动加载。使用向量检索实现语义召回。
 
+## 支持的 AI 工具
+
+| 工具 | Hooks 支持 | 功能 |
+|------|-----------|------|
+| **Claude Code** | ✅ 完整支持 | 行为观测 + 自动学习 + 向量记忆 |
+| **OpenCode/Crush** | ❌ 不支持 | 静态记忆 + 向量记忆 |
+| **OpenAI Codex CLI** | ❌ 不支持 | 静态记忆 + 向量记忆 |
+| **GitHub Copilot CLI** | ❌ 不支持 | 静态记忆 + 向量记忆 |
+
+> **注意**：只有 Claude Code 支持完整的 hooks 机制，其他工具只能使用静态记忆功能。
+
 ## 快速安装
 
 ### 方式一：一键安装脚本（推荐）
 
-**macOS / Linux:**
+**Claude Code (macOS / Linux):**
 ```bash
-curl -fsSL https://raw.githubusercontent.com/yourname/claude-code-memory-system/master/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/ziyouvip/claude-code-memory-system/master/install.sh | bash
 ```
 
-**Windows (PowerShell):**
+**Claude Code (Windows PowerShell):**
 ```powershell
-irm https://raw.githubusercontent.com/yourname/claude-code-memory-system/master/install.ps1 | iex
+irm https://raw.githubusercontent.com/ziyouvip/claude-code-memory-system/master/install.ps1 | iex
+```
+
+**其他工具 (设置 TOOL 环境变量):**
+```bash
+# OpenCode/Crush
+TOOL=opencode curl -fsSL https://raw.githubusercontent.com/ziyouvip/claude-code-memory-system/master/install.sh | bash
+
+# Codex CLI
+TOOL=codex curl -fsSL https://raw.githubusercontent.com/ziyouvip/claude-code-memory-system/master/install.sh | bash
+```
+
+**Windows 其他工具:**
+```powershell
+# OpenCode
+$env:TOOL='opencode'; irm https://raw.githubusercontent.com/ziyouvip/claude-code-memory-system/master/install.ps1 | iex
+
+# Codex
+$env:TOOL='codex'; irm https://raw.githubusercontent.com/ziyouvip/claude-code-memory-system/master/install.ps1 | iex
 ```
 
 ### 方式二：pip 安装
